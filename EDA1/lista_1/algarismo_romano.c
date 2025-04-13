@@ -1,36 +1,34 @@
 #include <stdio.h>
 
-void num_romanos(){
-	int I = 1;
-	int V = 5;
-	int X = 10; 
-	int L = 50;
-	int C = 100;
-	int D = 500;
-	int M = 1000;
+void converte_romanos(int N, int vet[])
+{
+    char *romanos[] = {"M","CM","D","CD","C", "XC","L","XL","X","IX","V","IV","I"};
+    int decimais[] = {1000, 900, 500, 400, 100, 90,  50, 40, 10, 9, 5, 4, 1};
+    char aux[3999];
 
-
-	if
+    for (int i = 0; i < N; i++)
+    {
+        int valor = vet[i];
+        for (int j = 0; j < 13; j++) {
+            while (valor >= decimais[j]) {
+                printf("%s", romanos[j]);
+                valor -= decimais[j];
+            }
+        }
+        printf("\n");
+    }
 }
 
+int main()
+{
+    int N;
+    int vet[3999];
+    scanf("%d", &N);
+    for (int i = 0; i < N; i++)
+    {
+        scanf("%d", &vet[i]);
+    }
+    converte_romanos(N, vet);
 
-
-
-int main(){
-	int N;
-	int vet[4000];
-	int cont = 0;
-
-	scanf("%d", &N);
-	
-	for(int i = 0; i < N; i++){
-		scanf("%d",&vet[i]);
-		cont++;
-	}	
-	
-	for(int j = 0; j < cont ; j++ ){
-		printf("%d",vet[j]);
-	}	
-	
-	return 0;
+    return 0;
 }

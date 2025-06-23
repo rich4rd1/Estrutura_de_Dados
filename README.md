@@ -1,6 +1,4 @@
-# Estrutura_de_Dados
-
-# Estrutura de Dados 📚
+# Estrutura de Dados 
 
 Repositório criado para armazenar atividades, exercícios e implementações relacionadas à disciplina de **Estrutura de Dados**, utilizando a linguagem **C**.
 

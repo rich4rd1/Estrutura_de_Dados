@@ -32,10 +32,4 @@ void insere_antes(celula *le, int x, int y)
     
     antes ->prox = novo_x;
     novo_x->prox = depois;
-    
-    //verificar se a proxima posição é y (pra isso preciso saber quem vem antes)
-    //se for eu insiro no nó atual e atualizo pra quem esse nó vai apontar 
-    //se não for igual, eu continui andando no vetor até chegar em null 
-    //quando eu chegar em null tenho que colocar o x antes de null
-    //verificando e atualizando meu antes para atual, e atual para proximo
 }

@@ -41,6 +41,23 @@ void remove_elemento(celula *le, int x)
 
 // Uma função que remove todas as ocorrências de x da lista encadeada, cujo protótipo é
 
-void remove_todos_elementos (celula *le, int x){
-    
+void remove_todos_elementos(celula *le, int x)
+{
+    celula *ptr = le->prox;
+    celula *aux = le;
+    while (ptr != NULL)
+    {
+        celula *temp = ptr;
+        if (ptr->dado == x)
+        {
+            aux->prox = ptr->prox;
+            ptr = ptr->prox;
+            free(temp);
+        }
+        else
+        {
+            aux = ptr;
+            ptr = ptr->prox;
+        }
+    }
 }

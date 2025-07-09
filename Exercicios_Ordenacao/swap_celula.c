@@ -57,11 +57,11 @@ void swap_node(cabeca *lista ,int dado1, int dado2){
     no *no2 = lista->prox;
 
     while(no1 != NULL && no1 -> dado != dado1){
-        prev1 -> no1;
+        prev1 -> prox;
         no1 = no1 ->prox;
     }
     while(no2 != NULL && no2 -> dado != dado1){
-        prev2 -> no2;
+        prev2 -> prox;
         no2 = no2 ->prox;
     }
 
